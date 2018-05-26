@@ -1,2 +1,0 @@
-[u'NN', u'PSP', u'DEM', u'NN', u'PSP', u'PSP', u'DEM', u'NN', u'PSP', u'VM', u'NN']
-
