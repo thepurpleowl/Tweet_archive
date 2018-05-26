@@ -1,0 +1,181 @@
+pre{font-size:1.3em;line-height:1.5em;font-family:"courier new",courier,monospace}*{margin:0;padding:0}html,body{height:100%}body{font:62.5%/150% "Lucida Grande",Verdana,Arial;color:#666;margin:0;padding:0!important;text-align:center}table{font:103%/160% "Lucida Grande",Verdana,Arial;text-decoration:none}a{outline:none}a:link,a:visited{color:#666;text-decoration:none}a:hover{text-decoration:underline;color:#1C95BB}h1,h2,h3,h4,h5,h6{font-weight:bold}h1{font-size:1.8em}h2{font-size:1.6em}h3{font-size:1.4em}h4{font-size:1.3em}h5{font-size:1.2em}h6{font-size:1em}a
+img{border:none;text-decoration:none}.center{text-align:center}input{padding:2px;margin-bottom:5px;margin-left:5px}textarea{margin-left:5px}.clear{clear:both}.cf:before,.cf:after{content:"";display:table}.cf:after{clear:both}.cf{*zoom:1}.boxWrap{text-align:left;width:1080px;margin:0
+auto}#container{background:transparent url(http://www.aresearchguide.com/images/argfs_headerbg.png) repeat-x center top;min-height:100%;position:relative}.container{background:#a00;padding:10px}.blocktest{float:left;display:inline;width:150px;height:120px;padding:30px
+0 0;margin:20px
+10px;text-align:center;background:#FF0;color:#000}#header
+.boxWrap{height:170px;position:relative;font-family:Verdana,Geneva,sans-serif;background:url(http://www.aresearchguide.com/images/argfs_headerbgtop.png) no-repeat}#header .boxWrap
+h1{font:0.1em Verdana, Arial, Helvetica, sans-serif;text-decoration:none;color:#0d4c91;width:355px;height:170px;margin:0;position:absolute;left:0;top:0}#header .boxWrap h1
+a{background:transparent url(http://www.aresearchguide.com/images/argfs_logo.jpg) no-repeat;text-indent:-10000em;height:170px;width:355px;display:block;text-decoration:none}#header .boxWrap h1 a:hover, #header .boxWrap h1 a:focus, #header .boxWrap h1 a:active{background-position:0 -170px}ul#topLinks{position:absolute;top:0px;right:250px;list-style:none outside none;margin:30px
+10px}#topLinks
+li{float:left;font-size:11px;letter-spacing:1px}#topLinks a, #topLinks a:visited{display:block;padding:3px
+10px 3px 11px;border-radius:6px;color:#46BEE1;text-decoration:none}#topLinks a:hover, #topLinks li:first-child a:hover{text-decoration:none;color:#D2EFF9;background-color:#219FC5}#social_network{position:absolute;top:0;right:1em}.social{list-style:none outside none;margin:30px
+auto;width:233px}.social
+li{display:inline;float:left;background-repeat:no-repeat}.social li
+a{display:block;width:24px;height:34px;padding-right:15px;position:relative;text-decoration:none}.social li a
+strong{font-weight:normal;position:absolute;left:10px;top:-1px;color:rgb(255, 255, 255);padding:3px;z-index:9999;text-shadow:1px 1px 2px rgba(0, 0, 0, 0.75);border-radius:4px;-moz-border-radius:4px;box-shadow:0px 0px 5px rgba(0, 0, 0, 0.5)}.social li.stumble a strong, .social li.google a
+strong{background-color:rgba(218, 72, 58, 0.8)}.social li.facebook a strong, .social li.twitter a
+strong{background-color:rgba(74, 168, 223, 0.8);}.social
+li.facebook{background:url(http://www.aresearchguide.com/images/argfs_i_facebook.png) no-repeat}.social
+li.twitter{background:url(http://www.aresearchguide.com/images/argfs_i_twitter.png) no-repeat}.social
+li.google{background:url(http://www.aresearchguide.com/images/argfs_i_goole.png) no-repeat}.social
+li.stumble{background:url(http://www.aresearchguide.com/images/argfs_i_stumble.png) no-repeat}#socialNetw:hover
+li{opacity:0.2}#socialNetw
+li{-webkit-transition-property:opacity;-webkit-transition-duration:500ms;-moz-transition-property:opacity;-moz-transition-duration:500ms;-o-transition:opacity;-o-transition:500ms}#socialNetw li a
+strong{opacity:0;-webkit-transition-property:opacity, top;-webkit-transition-duration:300ms;-moz-transition-property:opacity, top;-moz-transition-duration:300ms;-o-transition:opacity, top;-o-transition:300ms}#socialNetw li:hover{opacity:1}#socialNetw li:hover a
+strong{opacity:1;top:-15px;white-space:nowrap}#mainnav{position:absolute;top:126px;right:10px;z-index:5}.sf-menu, .sf-menu
+*{margin:0;padding:0;list-style:none}.sf-menu
+ul{background:#00384E url(http://www.aresearchguide.com/images/argfs_topmenusub.png) repeat-x scroll 0% 0%;padding:0px;position:absolute;top:-999em;border-bottom-right-radius:5px;border-bottom-left-radius:5px;-moz-box-shadow:2px 2px 6px rgba(0,0,0,.2);-webkit-box-shadow:2px 2px 6px rgba(0,0,0,.2);box-shadow:2px 2px 6px rgba(0,0,0,.2)}.sf-menu ul
+ul{border-bottom-right-radius:0px!important;border-bottom-left-radius:0px!important;margin:0px
+0px 0px 1px}.sf-menu ul
+li{width:100%}.sf-menu li:hover{visibility:inherit}.sf-menu
+li{float:left;position:relative}.sf-menu
+a{display:block;position:relative}.sf-menu li:hover ul, .sf-menu li.sfHover
+ul{left:0px;top:37px;z-index:99}ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li
+ul{top:-999em}ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover
+ul{left:156px;top:0px}.sf-menu
+a{text-decoration:none;color:rgb(255, 255, 255)}.sf-menu
+li{background:none repeat scroll 0% 0% transparent;margin:0px
+1px 0px 0px}.sf-menu li
+a{background:transparent url(http://www.aresearchguide.com/images/argfs_topmenu1.png) repeat-x scroll 0% -36px;height:36px;overflow:hidden;padding:0px
+14px;border-radius:4px 4px 0px 0px;color:rgb(255, 255, 255);font:100 13px/36px "Lucida Grande", Verdana, Arial}.sf-menu li
+li{background:none repeat scroll 0% 0% transparent;margin:0px
+0px 1px}.sf-menu li li
+a{background:transparent url(http://www.aresearchguide.com/images/argfs_topmenuSel.png) repeat-x scroll 0% -30px;height:30px;overflow:hidden;padding:0px
+0px 0px 11px;border-radius:0px;color:rgb(255, 255, 255);font-size:12px;line-height:30px;font-weight:normal;border-top:1px solid #036a91}.sf-menu li li
+li{background:none repeat scroll 0% 0% transparent;margin:0px
+0px 1px}.sf-menu li li li
+a{background:transparent url(http://www.aresearchguide.com/images/argfs_topmenuSel.png) repeat-x scroll 0% -30px;height:30px;overflow:hidden;padding:0px
+0px 0px 11px;border-radius:0px;color:rgb(255, 255, 255);font-size:12px;line-height:30px;font-weight:normal;border-top:1px solid #036a91}.sf-menu li:hover > a, .sf-menu li.sfHover > a, .sf-menu li > a:focus, .sf-menu li > a:hover, .sf-menu li > a:active, .sf-menu li.current-menu-item>a{background-position:0% 0%;outline:0px
+none}.sf-menu a.sf-with-ul{padding-right:2.25em;min-width:1px}.sf-sub-indicator{position:absolute;display:block;right:1em;top:1em;width:10px;height:10px;text-indent:-999em;overflow:hidden;background:url(http://www.aresearchguide.com/images/arrows-ffffff.png) no-repeat 0 -100px}li:hover > a .sf-sub-indicator,
+li.sfHover > a .sf-sub-indicator{background-position:-10px -100px}.sf-menu ul .sf-sub-indicator{background-position:0 0}.sf-menu ul li:hover > a .sf-sub-indicator,
+.sf-menu ul li.sfHover > a .sf-sub-indicator{background-position:-10px 0}#contentWrap{padding-bottom:450px;font-family:Georgia,"Times New Roman",Times,serif}#contentWrap
+.boxWrap{padding:20px
+0px}#content{display:inline-block;float:left;width:760px;padding:0.5em 1em}#content p, #right-section
+p{font-size:1.3em;line-height:1.4em;padding-bottom:0.8em}#content
+li{font-size:1.3em}.title{}h2.title{font-size:2em;line-height:2em;text-shadow:1px 1px 1px rgba(0,0,0,0.3)}#welcome{background:url(http://www.aresearchguide.com/images/argfs_i_curlyb.png) no-repeat 0px 0px;height:142px;padding:0
+3.8em;margin-bottom:2em;display:block}#welcome:hover{background-position:0 -142px;cursor:pointer}#welcome
+p{font-style:italic}.guide-section{padding-top:0.5em}.divider{background:url(http://www.aresearchguide.com/images/argfs_i_div.png) no-repeat center 0%;clear:both;height:25px}.box-content
+li{padding-bottom:0.8em;padding-left:1.2em}.section-title{padding:2.2em 0px 1em 5em;font:2.2em Georgia, "Times New Roman",Times,serif}.w-guide{background:url(http://www.aresearchguide.com/images/argfs_i_quill.png) no-repeat 0px 0px;color:#FF8E1A;padding-left:3.8em!important}ul.box-content{float:left;width:46%;list-style:none;margin-left:2em;margin-bottom:1.8em}#writting-guide .box-content
+li{color:#09C}#writting-guide .box-content li
+a{color:#219FC5;background:url(http://www.aresearchguide.com/images/argfs_i_arrowb.png) no-repeat 0px 3px;padding-left:1.2em}#writting-guide .box-content li a:hover{color:#FF8316;background:url(http://www.aresearchguide.com/images/argfs_i_arrowo.png) no-repeat 0px 3px}.l-guide{background:url(http://www.aresearchguide.com/images/argfs_i_book.png) no-repeat 0px 0px;color:#397E17}.l-book-wrap{margin-left:2em;clear:both;margin-top:2em}.l-book{float:left;width:226px;margin-left:1.5em}.l-book
+.thumb{float:left;width:100px;overflow:hidden;margin-right:10px}.l-book .book-info{float:left;width:116px;overflow:hidden;height:160px}.l-book .book-info
+h2{font:bold 13px "Trebuchet MS", Arial, Helvetica, sans-serif!important}.book-info h2
+a{color:#333}.book-info h2 a:hover{text-decoration:underline;color:#1C95BB}.b-author{margin-top:15px;font:11px "Trebuchet MS",Arial,Helvetica,sans-serif!important}.book-tag{background:url(http://www.aresearchguide.com/images/argfs_i_tag.png) no-repeat;height:35px;width:34px;position:relative;left:-2px;top:-162px}#literature-guide .box-content
+li{color:#cd7d37}#literature-guide .box-content li
+a{color:#cd7d37;padding-left:1.2em;background:url(http://www.aresearchguide.com/images/argfs_i_arrowbr.png) no-repeat 0px 3px}#literature-guide .box-content li a:hover{color:#47951F;background:url(http://www.aresearchguide.com/images/argfs_i_arrowg.png) no-repeat 0px 3px}.qa{background:url(http://www.aresearchguide.com/images/argfs_i_QA.png) no-repeat 0px 0px;color:#EA4E39}#qa .qa-wrap{padding-left:3em;margin-bottom:1.8em}#qa
+a{color:#696969}#qa a:hover{color:#EA4E39}#qa
+ul{list-style:none}#qa li a, #qa li a:link, #qa li a:visited{background:transparent url(http://www.aresearchguide.com/images/argfs_i_arrowr.png) no-repeat scroll 5px 12px;display:block;-webkit-transition:all 500ms ease-in-out;-o-transition:all 500ms ease-in-out;-moz-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out;border-bottom:1px dotted #F2F2F2;margin:0;padding:0.6em 0.5em 0.6em 1.3em;font-size:1.2em}#qa li a:hover{background:#ea4e39 url(http://www.aresearchguide.com/images/argfs_i_arroww.png) no-repeat 9px 12px;text-decoration:none;color:#FFF}#right-section{padding:0.5em 1em;float:left;width:260px}.sidebar
+ul{list-style:none;width:260px;border-radius:6px;padding-top:1em;padding-bottom:1em}.sidebar
+li{font-size:1.2em}.sidebar .box-bott{background:url(http://www.aresearchguide.com/images/argfs_sidebar_bott.gif) no-repeat scroll center top;display:block;height:8px;width:260px;margin-bottom:3em}h3#most-viewed{background:url(http://www.aresearchguide.com/images/argfs_i_page.png) no-repeat;height:48px;margin-bottom:0.5em}h3#most-viewed
+span{padding-left:4em;line-height:3.5em;color:#38A8C9}.sidebar ul#most-viewed-pages{border:1px
+solid #daf5fd;background:#e1f8ff}.sidebar ul#most-viewed-pages li a, .sidebar ul#most-viewed-pages li a:link, .sidebar ul#most-viewed-pages li a:visited{background:transparent url(http://www.aresearchguide.com/images/argfs_i_arrowblue2.gif) no-repeat scroll 7px 9px;display:block;-webkit-transition:all 500ms ease-in-out;-o-transition:all 500ms ease-in-out;-moz-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out;border-bottom:1px dotted #B9EFFF;margin:0;padding:0.5em 0.5em 0.5em 1.5em}.sidebar ul#most-viewed-pages li a:hover{background:#005C81 url(http://www.aresearchguide.com/images/argfs_i_arrowblue.gif) no-repeat 7px 9px;border-bottom:1px dotted #E1F8FF;text-decoration:none;color:#e7f3f8}h3#latest-questions{background:url(http://www.aresearchguide.com/images/argfs_i_question.png) no-repeat;height:48px;margin-bottom:0.5em}h3#latest-questions
+span{padding-left:4em;line-height:3.5em;color:#C43A2A}.sidebar ul#latest-questions-asked{border:1px
+solid #EEE;background:#f6f6f6}.sidebar ul#latest-questions-asked li a, .sidebar ul#latest-questions-asked li a:link, .sidebar ul#latest-questions-asked li a:visited{background:transparent url(http://www.aresearchguide.com/images/argfs_i_arrowgray.gif) no-repeat scroll 7px 9px;display:block;-webkit-transition:all 500ms ease-in-out;-o-transition:all 500ms ease-in-out;-moz-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out;border-bottom:1px dotted #eee;margin:0;padding:0.5em 0.5em 0.5em 1.5em}.sidebar ul#latest-questions-asked li a:hover{background:#585858 url(http://www.aresearchguide.com/images/argfs_i_arrowblue_o.gif) no-repeat 7px 9px;border-bottom:1px dotted #F7F7F7;text-decoration:none;color:#FFF}h3#poll{background:url(http://www.aresearchguide.com/images/argfs_i_poll.png) no-repeat;height:48px;margin-bottom:0.5em}h3#poll
+span{padding-left:4em;line-height:3.5em;color:#64A211}ul.answers{width:230px!important}.poll{list-style:none;width:260px;border-radius:6px;border:1px
+solid #e9f4b0!important;background:#f8fce3!important;font-family:"Lucida Grande",Verdana,Arial;padding:1em
+0!important}.poll
+h1{padding-left:1em;padding-top:0.5em;color:#2C4707!important}.poll ul.answers
+li.option{margin-left:1em!important;padding-bottom:0.4em!important}.poll
+.buttons{border-top:1px solid #e9f4b0!important}.poll .buttons .cast-vote
+input{border-radius:5px;box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.3), 1px 1px 5px rgba(0, 0, 0, 0.3);background-color:#9C0;border:1px
+solid #83AE00;padding:0.2em 0.5em;color:#EEE;cursor:pointer;-webkit-transition:all 500ms ease-in-out;-o-transition:all 500ms ease-in-out;-moz-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out;overflow:hidden;text-decoration:none;display:block;width:70px;text-align:center;margin-left:0.8em}.poll .buttons .cast-vote input:hover{background-color:#F60;border:1px
+solid #D25400;color:#FFF}.poll .buttons .view-results
+input{border-radius:5px;box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.3), 1px 1px 5px rgba(0, 0, 0, 0.3);background-color:#56C4ED!important;border:1px
+solid #16A3D8!important;padding:0.2em 0.5em;color:#EEEEEE!important;cursor:pointer;-webkit-transition:all 500ms ease-in-out;-o-transition:all 500ms ease-in-out;-moz-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out;overflow:hidden;text-decoration:none;display:block;width:100px;text-align:center;margin-right:0.7em}.poll .buttons .view-results input:hover{background-color:#F60!important;border:1px
+solid #D25400!important;color:#FFF}.poll .answers .option .textfield
+input{display:block;clear:both}.sidebar #g-search{margin-bottom:3em;margin-top:1em;background-color:#166590;border-radius:5px;padding:10px
+6px 6px;border:1px
+solid #125274}#cse-search-box
+input.input{width:65%;border:1px
+solid #DEDFE0!important;border-radius:5px;padding:4px!important;background-color:#FFF!important;box-shadow:inset 1px 1px 3px rgba(0, 0, 0, .1)}#cse-search-box
+input.button{color:#E1F8FF;background-color:#0A3250;border-radius:5px;cursor:pointer;padding:4px;text-decoration:none;border:none}#cse-search-box input.button:hover{color:#FFF;background-color:#86CF58}.add-side-box{margin-bottom:3em;margin-top:3em;text-align:center}.article-content{display:block;margin-bottom:40px;min-height:100px;padding:2.5em;text-align:left;background:#fff;position:relative;box-shadow:0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);*border:1px
+solid #DFDEDD}.article-content h4, .book-intro h4, .post-intro
+h4{line-height:2em;color:#009BC1;margin-bottom:1em}span.large-img{display:block;margin-bottom:4em}span.short-txt{margin-bottom:6em!important}.article-content h4 a:hover{text-decoration:none}.article-content:before,.article-content:after{position:absolute;width:30%;height:10px;content:"";left:12px;bottom:12px;background:transparent;-webkit-transform:skew(-5deg) rotate(-5deg);-moz-transform:skew(-5deg) rotate(-5deg);-ms-transform:skew(-5deg) rotate(-5deg);-o-transform:skew(-5deg) rotate(-5deg);transform:skew(-5deg) rotate(-5deg);box-shadow:0 10px 13px rgba(0,0,0,0.3);z-index:-1}.article-content:after{left:auto;right:12px;-webkit-transform:skew(5deg) rotate(5deg);-moz-transform:skew(5deg) rotate(5deg);-ms-transform:skew(5deg) rotate(5deg);-o-transform:skew(5deg) rotate(5deg);transform:skew(5deg) rotate(5deg)}.article-content p, .article-content li, .book-intro p, .post-intro
+p{line-height:1.8em!important;margin-bottom:1em!important}.article-content
+ul{list-style:none;margin-left:1.5em}.article-content
+li{background:url(http://www.aresearchguide.com/images/argfs_i_arrowg.png) no-repeat 0px 7px;padding-left:1.2em}.article-content li a:link, .article-content li a:visited, .article-content p a, .article-content p a:visited, .link-to-link a:link, .link-to-link a:visited{color:#47951F;text-decoration:none}.article-content li a:hover, .article-content p a:hover ,.link-to-link a:hover{color:#FF8316;border-bottom:1px dashed #FF8316}.article-content p
+img{padding-right:1em;padding-bottom:0.5em}.article-content .tips a:link
+span{display:none}.article-content .tips a:visited
+span{display:none}.article-content .tips a:hover
+span{position:absolute;margin:-42px 0px 0px 20px;*margin:-22px 0px 0px -180px;background-color:rgba(219, 244, 252 ,0.9);padding:2px
+10px;border:1px
+solid #9FE1F7;font:normal 10px/1.5em "Lucida Grande", Verdana, Arial;color:#0F8DB7;text-align:left;display:block;box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);border-radius:5px}#related-pages
+h4{border-bottom:1px solid #EEF0F0;font:bold 15px/1.8em "Trebuchet MS", Arial, Helvetica, sans-serif;padding-left:20px}#related-pages
+ul{list-style:none;margin-left:200px;background:url(http://www.aresearchguide.com/images/argfs_i_arrow_down.png) no-repeat 20px 0px;padding-top:2em;margin-left:20px;padding-bottom:1em}#related-pages li:first-child{margin-top:10px}#related-pages
+li{padding-bottom:0.8em}#related-pages li
+a{background:url(http://www.aresearchguide.com/images/argfs_i_bullet_bl.png) no-repeat 0px 2px;padding-left:1.6em;font-size:15px;color:#026186}#related-pages li a:hover{color:#f60;background:url(http://www.aresearchguide.com/images/argfs_i_bullet_org.png) no-repeat 0px 2px}#comment-wrap{margin-bottom:3em;margin-top:3em}h3#total-comments,h3#comment-form{margin-bottom:2em;font:bold 1.8em/2em "Trebuchet MS", Arial, Helvetica, sans-serif;color:#1C95BB;border-bottom:3px solid #BBEBF7}.comment-text
+blockquote{background:none #fff;padding:20px;padding-bottom:1px;box-shadow:0px 0px 5px 1px rgba(0, 0, 0, 0.20);border:1px
+solid #b5b3af;margin-bottom:10px;overflow:hidden;border-radius:8px;display:block}.comment-text blockquote
+p{background:none;box-shadow:none;padding:0;margin-bottom:20px;line-height:20px;letter-spacing:0.5px}.comment-text{float:left;width:560px;position:relative;margin-left:25px}.comment-text .comment-arrow{height:16px;left:-11px;position:absolute;top:20px;width:12px;background:url(http://www.aresearchguide.com/images/argfs_comment-arrow.png)}.comment-post{margin-bottom:2.5em}.comment-post
+.metadata{float:left;text-align:right;width:100px;padding-top:2px;padding-right:5px;padding-bottom:2px;font-family:Arial,Verdana,"Lucida Grande"}.comment-post .metadata
+p{padding-bottom:0.5em!important}.comment-post .metadata
+.date{font-style:italic;font-size:12px!important}.comment-post
+.gravatar{float:left;width:50px}.comment-post .gravatar
+img{padding:5px}.comment-post .metadata .comment-no{border:1px
+solid #B5B3AF;border-radius:15px 15px 15px 15px;color:#B5B3AF;height:13px;margin-left:70px;padding-top:1px;text-align:center;width:20px;letter-spacing:0.3px}#comment-wrap
+a{color:#1C95BB}#comment-wrap a:hover{color:#f60}#comment-form-wrap{clear:both;padding-top:2em}#comment-form-wrap
+form{overflow:hidden}#comment-form-wrap
+label{display:block;padding-bottom:5px;font:15px "Lucida Grande", Verdana, Arial;padding-left:8px}#commentform .form-field
+input{width:40%}#comment-form-wrap input.text, #comment-form-wrap
+textarea.text{border:1px
+solid #BCBAB7;border-radius:5px;box-shadow:inset 1px 1px 2px rgba(0, 0, 0, 0.1);padding:5px
+5px 5px 30px}#comment-form-wrap
+input.user{background:transparent url(http://www.aresearchguide.com/images/argfs_i_user.png) no-repeat 4px 4px}#comment-form-wrap
+input.mail{background:transparent url(http://www.aresearchguide.com/images/argfs_i_mail.png) no-repeat 4px 4px}#comment-form-wrap
+input.weburl{background:transparent url(http://www.aresearchguide.com/images/argfs_i_url.png) no-repeat 4px 4px}#comment-form-wrap textarea.com-txt{background:transparent url(http://www.aresearchguide.com/images/argfs_i_comment.png) no-repeat 4px 4px}#comment-form-wrap
+#submit{border-radius:5px;box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.3), 1px 1px 5px rgba(0, 0, 0, 0.3);background-color:#1C95BB;border:1px
+solid #1786A8;padding:0.5em 1em;color:#D2EBF2;cursor:pointer;-webkit-transition:all 500ms ease-in-out;-o-transition:all 500ms ease-in-out;-moz-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out;overflow:hidden;text-decoration:none;margin-left:0.5em}#comment-form-wrap #submit:hover{background-color:#F60;border:1px
+solid #D25400;color:#FFF}#footer{width:100%;height:450px;position:absolute;bottom:0;left:0;background:#005c81 url(http://www.aresearchguide.com/images/argfs_footerbg.png) repeat-x scroll 0px 0px}#footer
+.boxWrap{font-size:1.1em;text-decoration:none;padding:0;line-height:1.8em}#footertop{padding:0em
+1em 1em}#footertop
+.block{width:25%;padding:1em;float:left;display:inline;margin-right:1em}#footertop #footer-content-links
+h3{color:#FFF;line-height:2em;border-bottom:1px dashed #FFF;margin-bottom:0.5em;font-weight:normal;font-size:15px}ul.footer-links, ul.footer-links
+ul{list-style:none}.footer-links li
+ul{margin-left:0.8em}.footer-links li li
+a{background:url(http://www.aresearchguide.com/images/argfs_i_arrowblue.gif) no-repeat left center;padding-left:1em}.footer-links
+li{background:transparent url(http://www.aresearchguide.com/images/argfs_i_div_dots.png) repeat-x scroll left bottom;list-style:none;font-size:12px}.footer-links li
+a{display:block;padding:0.2em 0.2em 0.2em 0.5em;color:#E7F3F8}.footer-links li li a:hover{display:block;background:#005C81 url(http://www.aresearchguide.com/images/argfs_i_arrowblue_o.gif) no-repeat left center;text-decoration:none}.footer-links li a:hover{display:block;background:#005C81 url(http://www.aresearchguide.com/images/argfs_i_div_dots-w.png) repeat-x scroll left bottom;color:#FFF;text-decoration:none}#footertop a.read-more{border-radius:15px;box-shadow:0px 0px 5px rgba(0, 0, 0, 0.5);display:block;background-color:#005C81;float:right;padding:0.3em 0.8em;color:#96D1E2;margin-top:0.8em;cursor:pointer;font-size:12px;-webkit-transition:all 500ms ease-in-out;-o-transition:all 500ms ease-in-out;-moz-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out}#footertop a.read-more:hover{text-decoration:none;background-color:#86CF58;color:#FFF}#footertop .sn-links{width:70px}ul.footer-social-links{list-style:none;margin-left:1.2em}.footer-social-links
+.fb{background:url(http://www.aresearchguide.com/images/argfs_i_f_fb.png) no-repeat}.footer-social-links
+.tw{background:url(http://www.aresearchguide.com/images/argfs_i_f_t.png) no-repeat}.footer-social-links
+.su{background:url(http://www.aresearchguide.com/images/argfs_i_f_su.png) no-repeat}.footer-social-links
+.gg{background:url(http://www.aresearchguide.com/images/argfs_i_f_g.png) no-repeat}.footer-social-links .fb a, .footer-social-links .tw a,.footer-social-links .su a,.footer-social-links .gg
+a{text-indent:-10000em;display:block;text-decoration:none;height:35px;width:35px}.footer-social-links .fb a:hover{background:url(http://www.aresearchguide.com/images/argfs_i_f_fb_o.png) no-repeat}.footer-social-links .tw a:hover{background:url(http://www.aresearchguide.com/images/argfs_i_f_t_o.png) no-repeat}.footer-social-links .su a:hover{background:url(http://www.aresearchguide.com/images/argfs_i_f_su_o.png) no-repeat}.footer-social-links .gg a:hover{background:url(http://www.aresearchguide.com/images/argfs_i_f_g_o.png) no-repeat}#footerbott{color:#A4D7E6;margin-top:2em}#footerbott #footer-logo{width:200px;height:109px;margin-top:2.5em}#footerbott
+#copyright{width:400px;padding-top:5.5em;text-align:left}#footerbott
+.block2{float:left}#footer-links{margin-top:0.5em}#footerbott #footer-links li:first-child{background:transparent}#footerbott #footer-links
+li{padding:0
+0.8em;display:inline;background:url(http://www.aresearchguide.com/images/argfs_linkdiv.gif) no-repeat 0px 50%}#footerbott
+a{letter-spacing:0.1em;color:#A4D7E6;text-decoration:none}#footerbott a:hover{color:#DFF1F7;text-decoration:none}.block-news{width:360px;padding:1em;float:right;display:inline}#newsletter{background:url(http://www.aresearchguide.com/images/argfs_newsletter.png) no-repeat;margin-top:1em;height:160px}#newsletter #newsletter-wrap{margin-left:2.5em}#newsletter-wrap p.nl-note{width:290px;line-height:1.3em;color:#666}#newsletter
+h2{padding-top:0.5em;line-height:1.8em;color:#5A88B0}#newsletter h2, #newsletter p, #newsletter #subscribe-form
+input{font-family:Georgia,"Times New Roman",Times,serif}#newsletter_signup
+.email{float:left;background:#EFEFEF;width:50%;margin:6px
+10px 6px 0px;padding:5px;box-shadow:inset 1px 1px 1px rgba(0, 0, 0, 0.1);border-radius:2px;border:none}#newsletter
+#newsletter_signup{margin-top:10px}#newsletter_signup #newsletter-subscribe{float:left;width:80px;background-color:#9C0;-webkit-transition:all 0.1s ease-in 0s;-moz-transition:all 0.1s ease-in 0s;-o-transition:all 0.1s ease-in 0s;-ms-transition:all 0.1s ease-in 0s;transition:all 0.1s ease-in 0s;border:1px
+solid #83AE00;border-radius:2px 2px 2px 2px;box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.3);color:#EEE;cursor:pointer;display:inline-block;font-size:13px;letter-spacing:0.2px;margin:5px
+0px 0px;overflow:hidden;padding:4px
+12px;text-decoration:none;text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.2)}#newsletter_signup #newsletter-subscribe:hover{background-color:#44A9C9;border:1px
+solid #2E839E}#go-to-top{position:fixed;bottom:30px;right:15px}#go-to-top
+a{width:60px;display:block;text-align:center;font:11px/100% Arial, Helvetica, sans-serif;text-decoration:none;color:#9DD3E3;-webkit-transition:1s;-moz-transition:1s;-o-transition:1s;transition:1s}#go-to-top a:hover{color:#FFF}#go-to-top
+span{width:50px;height:50px;display:block;margin-bottom:7px;background:#78C0D8 url(http://www.aresearchguide.com/images/argfs_up-arrow.png) no-repeat center center;-webkit-border-radius:50px;-moz-border-radius:50px;border-radius:50px;-webkit-transition:1s;-moz-transition:1s;-o-transition:1s;transition:1s}#go-to-top a:hover
+span{background-color:#72b310}.article-title{font:bold 1.6em/2em "Lucida Grande", Verdana, Arial;background:url(http://www.aresearchguide.com/images/argfs_i_article-quill.png) no-repeat left top;height:72px;padding-left:75px;padding-top:20px}.toc,.category{background-color:#F6F6F6;border-radius:10px;padding:1em;box-shadow:2px 2px 5px rgba(0, 0, 0, 0.1);width:90%;margin-bottom:3.5em}.toc h3, .category
+h3{text-align:center;border-bottom:1px solid #EEF0F0;line-height:1.8em;font-family:"Trebuchet MS",Arial,Helvetica,sans-serif}.toc
+ul{list-style:none;margin-left:1em;background:url(http://www.aresearchguide.com/images/argfs_i_arrow_down.png) no-repeat center top;padding-top:2em;margin-bottom:1em}.toc
+li{line-height:1.4em;padding-bottom:0.8em}.toc li
+a{background:url(http://www.aresearchguide.com/images/argfs_i_bullet_gray.png) no-repeat 0px 2px;padding-left:1.6em;font-size:15px}.toc li a:hover{color:#47951F;background:url(http://www.aresearchguide.com/images/argfs_i_bullet_gr.png) no-repeat 0px 2px}.toc
+p{padding-left:2.8em}.book-section{margin-top:4em;margin-bottom:3em;margin-left:-20px}.intro,.intro-links,.book-intro,.post-intro{margin-bottom:2em;padding-left:1em}.intro ul, .intro-links
+ul{list-style:none;margin-left:0.8em}.intro-links
+li{padding-bottom:0.8em}.intro  li, .intro-links li
+a{padding-left:1.2em;padding-bottom:0.8em}.intro
+li{color:#219FC5;background:url(http://www.aresearchguide.com/images/argfs_i_arrowb.png) no-repeat 0px 3px}.intro-links li
+a{color:#47951F;text-decoration:none;background:url(http://www.aresearchguide.com/images/argfs_i_arrowg.png) no-repeat 0px 3px}.intro-links li a:hover{color:#FF8316;background:url(http://www.aresearchguide.com/images/argfs_i_arrowo.png) no-repeat 0px 3px;text-decoration:underline}.book-intro,.post-intro{padding-right:2.5em}.intro-links
+h4{line-height:3em;padding-left:0.5em}.book-intro
+img{margin-right:auto;margin-left:auto;display:block;padding:5px;background:#E3F9FF;border:1px
+dashed #84E3FF}.book-intro a, .post-intro
+a{color:#219FC5;text-decoration:none}.book-intro a:hover, .post-intro a:hover{color:#FF8316;text-decoration:underline}.book-intro a img:hover{text-decoration:none;background:#FFEBAC;border:1px
+dashed #FC3}.highlight{font-weight:bold}.book-intro h4, .post-intro
+h4{color:#666}.book-intro h4 a:hover, .post-intro h4 a:hover{text-decoration:underline}.category>h3{font-size:1.5em}.category>ol{background:url(http://www.aresearchguide.com/images/argfs_i_arrow_down.png) no-repeat center top;padding-top:2em!important}.category
+ol{counter-reset:item;list-style:none;*list-style:decimal;margin-bottom:1.8em;text-shadow:0 1px 0 rgba(255,255,255,.5);padding:0}.category
+p{padding-left:1.2em;font-family:"Lucida Grande",Verdana,Arial}.category ol
+ol{margin:0.8em 0 0 3.5em!important}.category-list li a span,.link-to-link{font-size:12px!important}.category-list li:last-child{padding-bottom:0!important}.category .category-list
+li{padding-bottom:0.5em}.category .category-list
+a{position:relative;display:block;padding: .4em .4em .4em .8em;*padding: .4em;color:#575757;margin:0
+0 0 3.2em;background-color:#F6F6F6;text-decoration:none;-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out;font:13px "Lucida Grande", Verdana, Arial}.category .category-list a:hover{background:#eee}.category .category-list a:before{content:counters(item, ".", decimal) " ";counter-increment:item;position:absolute;left:-2em;top:50%;margin-top:-1em;background-color:#C4C5C6;height:2em;width:2em;line-height:2em;text-align:center}.category .category-list a:after{position:absolute;content:"";border:0.5em solid transparent;left:-0.5em;top:50%;margin-top:-0.5em;-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}.category .category-list a:hover:after{left:0;border-left-color:#C4C5C6}

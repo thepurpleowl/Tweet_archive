@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta name="robots" content="all">
+    <meta name="revisit-after" content="31 days">
+    <meta name="viewport" content="width=device-width; initial-scale=0.65">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <title>a beginners guide to streamed data from Twitter (tecznotes)</title>
+    
+    <link rel="Stylesheet" href="a%20beginners%20guide%20to%20streamed%20data%20from%20Twitter%20%28tecznotes%29_files/style.css" type="text/css" media="Screen" charset="iso-8859-1">
+    <link rel="alternate" type="application/atom+xml" title="Feed" href="http://mike.teczno.com/notes/index.xml">
+        <link rev="canonical" type="text/html" href="http://teczno.com/s/cl7">
+    <link rel="alternate short" type="text/html" href="http://teczno.com/s/cl7">
+</head>
+
+<body>
+
+    <div id="page">
+    <div id="content">
+	
+		<h1>
+			<a href="http://mike.teczno.com/notes/" accesskey="1">tecznotes</a>
+		</h1>
+		
+		<p>
+            Michal Migurski's notebook, listening post, and soapbox.            Subscribe to <a class="feed" href="http://mike.teczno.com/notes/index.xml"><img src="a%20beginners%20guide%20to%20streamed%20data%20from%20Twitter%20%28tecznotes%29_files/feed.png" height="12" width="12"> this blog</a>.
+            Check out the <a href="http://mike.teczno.com/">rest of my site</a> as well.
+		</p>
+		
+        <div id="blog">
+<div class="item">
+    <a name="streaming-data-from-twitter"></a>
+
+    <h2 class="date">
+        <span class="month"><a href="http://mike.teczno.com/notes/2012/09/">Sep</a></span>
+        <span class="day"><a href="http://mike.teczno.com/notes/2012/09/18/">18</a></span><span class="punctuation">,</span>
+        <span class="year"><a href="http://mike.teczno.com/notes/2012/">2012</a></span>
+        <span class="hour-minute">2:35am</span>
+    </h2>
+
+    <div class="blogbody">
+        <h3 class="title"><a href="http://mike.teczno.com/notes/streaming-data-from-twitter.html">a beginners guide to streamed data from Twitter</a></h3>
+        <div class="item-description ">
+<p>A few months ago, Shawn Allen and I taught a class on visualizing and mapping data at <a href="http://www.gaffta.org/">GAFFTA</a>.
+ We covered everything from client-side Javascript map interaction, 
+basemap design with OpenStreetMap and Mapnik, dynamic in-browser 
+graphics with D3, to ingesting and handling raw open public data. For 
+one set of exercises, we prepared a selection of tweets pulled from the <a href="https://dev.twitter.com/docs/streaming-apis">Twitter Streaming API</a>,
+ affectionately known as the fire hose. This data, which I had assumed 
+would just be a throwaway set of raw points to use when demonstrating 
+other concepts, turned out to be a major source of interest all on its 
+own. With Stamen’s annual MTV Twitter project behind us, I thought it’d 
+be worth describing the process we used to get data from Twitter into a 
+form usable in a beginning classroom setting.</p>
+<p>This is a brief guide on using the Twitter live streaming API, 
+extracting useful data from it, and converting that data into a 
+spreadsheet-ready text form, all using tools available on Mac OS X by 
+default. There’s also a brief Python tutorial for scrubbing basic data 
+buried in here someplace.</p>
+<h4>Getting useful data from the Twitter Streaming API</h4>
+<p>There are a lot of onerous and complicated ways to deal with 
+Twitter’s data, but they’ve thoughtfully published it in a form that’s a
+ breeze to deal with just using command line tools included on Mac OS X.
+ I’m still on 10.6 Snow Leopard myself (<em>10.6.8 4 Lyfe!</em>) but assuming Apple hasn’t done anything horrible with the Lions everything below should work on newer systems.</p>
+<p>The first thing you need to do is open up the Terminal app, and get yourself to a command line. We’ll be using a program called <code>cURL</code> to download data from Twitter (<a href="http://www.mac-terminal.com/network/curl/">more on cURL</a>),
+ starting with a simple sample of all public tweets. With your own 
+Twitter username and password in place of “dhelm:12345”, try this:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">curl --user dhelm:12345 \
+     https://stream.twitter.com/1.1/statuses/sample.json</pre>
+<p>You will see a torrent of tweets fly by; type Control-C to stop them. <code>statuses/sample</code>
+ is a random selection of all public updates. To get a specific 
+selection of tweets matching a particular search term or geographic 
+area, we’ll use <a href="https://dev.twitter.com/docs/api/1.1/post/statuses/filter"><code>statuses/filter</code></a> with a <a href="https://dev.twitter.com/docs/streaming-apis/parameters#locations">location search</a>:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">curl --user dhelm:12345 \
+     -X POST -d 'locations=-123.044,36.846,-121.591,38.352' \
+     https://stream.twitter.com/1.1/statuses/filter.json \
+     &gt; raw-tweets.txt</pre>
+<p>The “<code style="white-space: nowrap">-X POST</code>” option posts search data to Twitter and the “<code style="white-space: nowrap">-d 'location=…'</code>” option is the data that gets sent. The numbers “-123.044,36.846,-121.591,38.352” are a <a href="http://pafciu17.dev.openstreetmap.org/?width=512&amp;polygons=-123.044000%2C36.846000%2C-123.044000%2C38.352000%2C-121.591000%2C38.352000%2C-121.591000%2C36.846000%2Ccolor%3A0%3A0%3A0&amp;bbox=-123.225625%2C38.540250%2C-121.409375%2C36.657750&amp;module=map&amp;height=384">bounding box around the SF Bay Area</a>, determined by using <a href="http://getlatlon.com/">getlatlon.com</a>. The part at the end, “<code style="white-space: nowrap">&gt; raw-tweets.txt</code>”,
+ takes that flood of data from before and redirects it to a file where 
+you can read it later. cURL will keep reading data until you tell it to 
+stop, again with Control-C. I left mine open on a Sunday evening while 
+making dinner and ended up with almost 20MB of Twitter data from New 
+York and San Francisco.</p>
+<p>Now, we’re going to switch to a programming environment called Python
+ to pull useful data out of that file. Type “python” to start it, and 
+you should see something like this:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">Python 2.6.1 (r261:67515, Jun 24 2010, 21:47:49) 
+[GCC 4.2.1 (Apple Inc. build 5646)] on darwin
+&gt;&gt;&gt; </pre>
+<p>The “<code style="white-space: nowrap">&gt;&gt;&gt;</code>” means 
+Python is ready for you to type commands. First, we’ll read the file of 
+data and convert it to a list of tweet data. Type these lines, taking 
+care to <a href="http://docs.python.org/release/2.5.2/ref/indentation.html">include the indentation</a>:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">import json
+tweets = []
+
+for line in open('raw-tweets.txt'):
+  try: 
+    tweets.append(json.loads(line))
+  except:
+    pass</pre>
+<p>That will read each line of the file and attempt to parse the tweet data using <code>json.loads()</code>, a function that converts raw <a href="http://json.org/">JSON</a> messages into objects. The <code>try</code>/<code>except</code> part makes sure that it doesn’t blow up in your face when you hit an incomplete tweet at the end of the file.</p>
+<p>Find out how many you’ve collected, by printing the length (<em>len</em>) of the tweets list:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">print len(tweets)</pre>
+<p>Now look at a single tweet:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">tweet = tweets[0]
+print tweet</pre>
+<p>It’ll look something like <a href="http://www.scribd.com/doc/30146338/map-of-a-tweet">this map of a tweet published by Raffi Krikorian</a>:</p>
+<p>
+<a href="http://www.scribd.com/doc/30146338/map-of-a-tweet"><img src="a%20beginners%20guide%20to%20streamed%20data%20from%20Twitter%20%28tecznotes%29_files/raffi-krikorian-map-of-a-tweet.png" alt="map of a tweet" width="100%"></a>
+</p>
+<p>That might be a bit much, so just look at the top-level keys in the tweet object:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">print tweet.keys()</pre>
+<p>You’ll see a list of keys: <em>user</em>, <em>favorited</em>, <em>contributors</em>, <em>entities</em>, <em>text</em>, <em>created_at</em>, <em>truncated</em>, <em>retweeted</em>, <em>in_reply_to_status_id</em>, <em>coordinates</em>, <em>id</em>, <em>source</em>, <em>in_reply_to_status_id_str</em>, <em>in_reply_to_screen_name</em>, <em>id_str</em>, <em>place</em>, <em>retweet_count</em>, <em>geo</em>, <em>in_reply_to_user_id_str</em>, and <em>in_reply_to_user_id</em>.</p>
+<p>The id, text and time tweeted (“created_at”) are interesting. We’ll 
+use “id_str” instead of “id” because Twitter’s numbers are so large that
+ it’s generally more reliable to use string version than the numeric 
+version. We can make a list of ID’s by looping over every tweet, like 
+this:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">ids = []
+for tweet in tweets:
+  ids.append(tweet['id_str'])</pre>
+<p>Since all we’re doing in this tutorial is looping over lists, it’s 
+easier and faster to learn a feature of the Python language called list 
+comprehensions. Carl Groner <a href="http://carlgroner.me/Python/2011/11/09/An-Introduction-to-List-Comprehensions-in-Python.html">has an excellent explanation</a>, as does <a href="http://www.secnetix.de/olli/Python/list_comprehensions.hawk">Oliver Fromme</a>. The short version is that these three lines are equivalent to three for-loops like the one above:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">ids = [tweet['id_str'] for tweet in tweets]
+texts = [tweet['text'] for tweet in tweets]
+times = [tweet['created_at'] for tweet in tweets]</pre>
+<p>So now we have three lists: unique ID’s, text content (the actual words people wrote), and times for each tweet.</p>
+<p>How about user information?</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">print tweet['user'].keys()</pre>
+<p>You’ll see another list of keys, with per-user information for each tweet: <em>follow_request_sent</em>, <em>profile_use_background_image</em>, <em>geo_enabled</em>, <em>description</em>, <em>verified</em>, <em>profile_image_url_https</em>, <em>profile_sidebar_fill_color</em>, <em>id</em>, <em>profile_text_color</em>, <em>followers_count</em>, <em>profile_sidebar_border_color</em>, <em>id_str</em>, <em>default_profile_image</em>, <em>listed_count</em>, <em>utc_offset</em>, <em>statuses_count</em>, <em>profile_background_color</em>, <em>friends_count</em>, <em>location</em>, <em>profile_link_color</em>, <em>profile_image_url</em>, <em>notifications</em>, <em>profile_background_image_url_https</em>, <em>profile_background_image_url</em>, <em>name</em>, <em>lang</em>, <em>following</em>, <em>profile_background_tile</em>, <em>favourites_count</em>, <em>screen_name</em>, <em>url</em>, <em>created_at</em>, <em>contributors_enabled</em>, <em>time_zone</em>, <em>protected</em>, <em>default_profile</em>, and <em>is_translator</em>.
+ Twitter’s API saves you from having to look up extra information about 
+each tweet by including it right there in every message. Although a 
+tweet is only 140 characters, there can be as much as 4KB of data like 
+this associated with each one.</p>
+<p>We’ll just grab everyone’s name and screen name and leave the rest alone:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">screen_names = [tweet['user']['screen_name'] for tweet in tweets]
+names = [tweet['user']['name'] for tweet in tweets]</pre>
+<h4>Looking for links, users, hashtags and places</h4>
+<p>When you tweet the “@” or “#” symbols or include links to web pages, 
+these are interesting extra pieces of information. Twitter actually 
+finds them for you and tells you exactly where in a message they are, so
+ you don’t have to do it yourself. Look at the contents of a tweet’s <em>entities</em> object:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">print tweet['entities']</pre>
+<p>You will see three lists: <code style="white-space: nowrap">{'user_mentions': [], 'hashtags': [], 'urls': []}</code>.
+ For the tweet I chose, these are all empty. We’ll need to hunt through 
+the full list of tweets to find one with a user mention, print it out 
+and stop (“break”) when we’re done:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">for tweet in tweets:
+  if tweet['entities']['user_mentions']:
+    print tweet['entities']['user_mentions']
+    break</pre>
+<p>You may see something like this:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">[
+  {
+    'id': 61826138,
+    'id_str': '61826138',
+    'indices': [0, 10],
+    'screen_name': 'sabcab123',
+    'name': 'Sabreena Cabrera'
+  },
+  {
+    'id': 270743157,
+    'id_str': '270743157',
+    'indices': [11, 22],
+    'screen_name': 'SimplyCela',
+    'name': '(:'
+  }
+]</pre>
+<p>The two-element <em>indices</em> array says where that user mention 
+begins and ends in the tweet; the rest of it is information about the 
+mentioned user. In this case, I found a tweet with two users mentioned. 
+Try doing the same thing for hashtags and urls. Links include Twitter’s 
+shortened t.co link, the original fully-expanded address, and text that a
+ client can display:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">[
+  {
+    'indices': [39, 59],
+    'url': 'http://t.co/XEvdU0cW',
+    'expanded_url': 'http://instagr.am/p/PqMhTZtpw-/',
+    'display_url': 'instagr.am/p/PqMhTZtpw-/'
+  }
+]</pre>
+<p>For every tweet in the list, we’ll pull out the first and second user
+ mention, hashtag and link. Since many tweets may not have these and 
+Python will complain if asked to retrieve and item in a list that 
+doesn’t exist, we can use an <a href="http://docs.python.org/faq/programming.html#is-there-an-equivalent-of-c-s-ternary-operator"><code>if/else</code> pattern</a> in Python that checks a value before attempting to use it: <code style="white-space: nowrap">thing if test else other_thing</code>:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">mentions1 = [(T['entities']['user_mentions'][0]['screen_name'] if len(T['entities']['user_mentions']) &gt;= 1 else None) for T in tweets]
+mentions2 = [(T['entities']['user_mentions'][1]['screen_name'] if len(T['entities']['user_mentions']) &gt;= 2 else None) for T in tweets]
+hashtags1 = [(T['entities']['hashtags'][0]['text'] if len(T['entities']['hashtags']) &gt;= 1 else None) for T in tweets]
+hashtags2 = [(T['entities']['hashtags'][1]['text'] if len(T['entities']['hashtags']) &gt;= 2 else None) for T in tweets]
+urls1 = [(T['entities']['urls'][0]['expanded_url'] if len(T['entities']['urls']) &gt;= 1 else None) for T in tweets]
+urls2 = [(T['entities']['urls'][1]['expanded_url'] if len(T['entities']['urls']) &gt;= 2 else None) for T in tweets]</pre>
+<p>At the beginning of this exercise, we used a geographic bounding box 
+to search for tweets—can we get the geographic location of each one 
+back? We’ll start with just a point location:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">print tweet['geo']</pre>
+<p>Which gives us something like <code style="white-space: nowrap">{'type': 'Point', 'coordinates': [40.852, -73.897]}</code>. So, we’ll pull all the latitudes and longitudes out of our tweets into two separate lists:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">lats = [(T['geo']['coordinates'][0] if T['geo'] else None) for T in tweets]
+lons = [(T['geo']['coordinates'][1] if T['geo'] else None) for T in tweets]</pre>
+<p>Twitter also says a little about the place where a tweet was sent, in the <em>place</em> object:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">print tweet['place'].keys()</pre>
+<p>The keys on each place include <em>country_code</em>, <em>url</em>, <em>country</em>, <em>place_type</em>, <em>bounding_box</em>, <em>full_name</em>, <em>attributes</em>, <em>id</em>, and <em>name</em>. We’ve already got geographic points above, so we’ll just make a note of the place name and type:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">place_names = [(T['place']['full_name'] if T['place'] else None) for T in tweets]
+place_types = [(T['place']['place_type'] if T['place'] else None) for T in tweets]</pre>
+<h4>Outputting to CSV</h4>
+<p>We’ve collected fifteen separate lists of tiny pieces of information about each tweet: <em>ids</em>, <em>texts</em>, <em>times</em>, <em>screen_names</em>, <em>names</em>, <em>mentions1</em>, <em>mentions2</em>, <em>hashtags1</em>, <em>hashtags2</em>, <em>urls1</em>, <em>urls2</em>, <em>lats</em>, <em>lons</em>, <em>place_names</em> and <em>place_types</em>.
+ They’re a mix of numbers and strings and we want to output them 
+someplace useful, perhaps a CSV file full of data that we can open as a 
+spreadsheet or insert into a database.</p>
+<p>Python makes it easy to write files. Start by opening one and printing a line of column headers:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">out = open('/tmp/tweets.csv', 'w')
+print &gt;&gt; out, 'id,created,text,screen name,name,mention 1,mention 2,hashtag 1,hashtag 2,url 1,url 2,lat,lon,place name,place type'</pre>
+<p>Next, we’ll let the <a href="http://docs.python.org/library/csv.html#csv.writer">built-in <code>csv.writer</code> class</a>
+ do the work of formatting each tweet into a valid line of data. First, 
+we’ll merge each of our fifteen lists into a single list using the <a href="http://docs.python.org/library/functions.html#zip">indispensable <code>zip</code> function</a>. Then, we’ll iterate over each one taking care to encode our text, which may contain foreign characters, to <a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a> along the way:</p>
+<pre style="overflow: auto; padding: .35em; background: #eee">rows = zip(ids, times, texts, screen_names, names, mentions1, mentions2, hashtags1, hashtags2, urls1, urls2, lats, lons, place_names, place_types)
+
+from csv import writer
+csv = writer(out)
+
+for row in rows:
+    values = [(value.encode('utf8') if hasattr(value, 'encode') else value) for value in row]
+    csv.writerow(values)
+
+out.close()</pre>
+<p>Boom! All done. You now have a simple file that Numbers, Excel and 
+MySQL can all read full of sample tweets pulled directly from the live, 
+streaming API.</p></div>
+    </div>
+
+    
+        <div class="blogcomments">
+            <h4 class="comments">
+                <a name="comments"></a>Comments
+                (1)            </h4>
+            
+                    
+                            <ol>
+                                            <li class="comment">
+                            <p style="white-space: pre-wrap;">Thanks!</p>
+    
+                                                            <p class="author">Posted by <a href="http://dirkmjk.nl/">dirkmjk</a> on Saturday, November 10 2012 11:59am EST</p>
+                                                    </li>
+                                    </ol>
+                        
+                            <p><em>Sorry, no new comments on old posts.</em></p>
+            
+                    </div>
+        
+        <div class="posted">
+            <a class="link" href="http://mike.teczno.com/notes/streaming-data-from-twitter.html">permanent link</a>
+            |
+            <a class="link" href="http://mike.teczno.com/notes/">tecznotes</a>
+            <!--
+            |
+            <a class="link" href="http://del.icio.us/url/check?url=http%3A%2F%2Fmike.teczno.com%2Fnotes%2Fstreaming-data-from-twitter.html">delicious</a>
+            -->
+        </div>
+
+    
+</div>
+        </div>
+    
+        <p class="footer">
+            subscribe to <a class="feed" href="http://mike.teczno.com/notes/index.xml"><img src="a%20beginners%20guide%20to%20streamed%20data%20from%20Twitter%20%28tecznotes%29_files/feed.png" height="12" width="12"> this site</a>.
+            |
+            <a href="http://mike.teczno.com/contact.html">contact Michal Migurski</a>
+        </p>
+    
+    </div>
+    
+    <div id="snippet">
+		
+        <table class="calendar"><tbody><tr><th colspan="7" class="calendar_month_head"><a href="http://mike.teczno.com/notes/2016/07/">July 2016</a></th></tr><tr>
+                          <th class="calendar_day_head">Su</th>
+                          <th class="calendar_day_head">M</th>
+                          <th class="calendar_day_head">Tu</th>
+                          <th class="calendar_day_head">W</th>
+                          <th class="calendar_day_head">Th</th>
+                          <th class="calendar_day_head">F</th>
+                          <th class="calendar_day_head">Sa</th>
+                      </tr><tr><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_nolink">1</td><td class="calendar_day_nolink">2</td></tr><tr><td class="calendar_day_nolink">3</td><td class="calendar_day_nolink">4</td><td class="calendar_day_nolink">5</td><td class="calendar_day_nolink">6</td><td class="calendar_day_nolink">7</td><td class="calendar_day_nolink">8</td><td class="calendar_day_nolink">9</td></tr><tr><td class="calendar_day_nolink">10</td><td class="calendar_day_nolink">11</td><td class="calendar_day_nolink">12</td><td class="calendar_day_nolink">13</td><td class="calendar_day_nolink">14</td><td class="calendar_day_nolink">15</td><td class="calendar_day_nolink">16</td></tr><tr><td class="calendar_day_nolink">17</td><td class="calendar_day_nolink">18</td><td class="calendar_day_nolink">19</td><td class="calendar_day_nolink">20</td><td class="calendar_day_nolink">21</td><td class="calendar_day_nolink">22</td><td class="calendar_day_nolink">23</td></tr><tr><td class="calendar_day_nolink">24</td><td class="calendar_day_nolink">25</td><td class="calendar_day_nolink">26</td><td class="calendar_day_nolink">27</td><td class="calendar_day_nolink">28</td><td class="calendar_day_nolink">29</td><td class="calendar_day_nolink">30</td></tr><tr><td class="calendar_day_nolink">31</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td><td class="calendar_day_noday">&nbsp;</td></tr></tbody></table>
+        <h3>Recent Entries</h3>
+        <ol class="recentstories"><li><a href="http://mike.teczno.com/notes/openaddr/docker-address-data.html">dockering address data</a></li><li><a href="http://mike.teczno.com/notes/books/best-and-the-brightest.html">blog all dog-eared pages: the best and the brightest</a></li><li><a href="http://mike.teczno.com/notes/openaddr/5min-geocoder.html">five-minute geocoder for openaddresses</a></li><li><a href="http://mike.teczno.com/notes/debian-packaging-for-ubuntu.html">notes on debian packaging for ubuntu</a></li><li><a href="http://mike.teczno.com/notes/guyana-trip-report.html">guyana trip report</a></li><li><a href="http://mike.teczno.com/notes/openaddr/population-comparison.html">openaddresses population comparison</a></li><li><a href="http://mike.teczno.com/notes/music/top-2015.html">blog all oft-played tracks VII</a></li><li><a href="http://mike.teczno.com/notes/1984-back-to-the-map.html">week 1,984: back to the map</a></li><li><a href="http://mike.teczno.com/notes/bikes/road-trek.html">bike eleven: trek roadie</a></li><li><a href="http://mike.teczno.com/notes/code-like-you-dont-have-the-time.html">code like you don’t have the time</a></li><li><a href="http://mike.teczno.com/notes/projecting-elevation-data.html">projecting elevation data</a></li><li><a href="http://mike.teczno.com/notes/bikes/bike-rack-burrito-box.html">the bike rack burrito n’ beer box</a></li><li><a href="http://mike.teczno.com/notes/moving-bodies-historic-map.html">a historical map for moving bodies, moving culture</a></li><li><a href="http://mike.teczno.com/notes/openstreetmap-churches.html">the other openstreetmap churches post</a></li><li><a href="http://mike.teczno.com/notes/platforminess-smartness-meaningfulness.html">platforminess, smartness, and meaningfulness</a></li><li><a href="http://mike.teczno.com/notes/openaddr/openaddresses-ci.html">writing a new continuous integration service for openaddresses</a></li><li><a href="http://mike.teczno.com/notes/sotmus-2015-new-york.html">state of the map 2015</a></li><li><a href="http://mike.teczno.com/notes/bikes/schwinn-touring-v2.html">bike ten: schwinn touring, v2</a></li><li><a href="http://mike.teczno.com/notes/music/top-2014.html">blog all oft-played tracks VI</a></li><li><a href="http://mike.teczno.com/notes/fellowship-reader.html">2015 fellowship reader</a></li></ol>        
+        <h3>Archives</h3>
+        <ul class="flatarchives"><li><a href="http://mike.teczno.com/notes/2016/06/">June</a> 2016 (2)</li><li><a href="http://mike.teczno.com/notes/2016/05/">May</a> 2016 (2)</li><li><a href="http://mike.teczno.com/notes/2016/04/">April</a> 2016 (1)</li><li><a href="http://mike.teczno.com/notes/2016/02/">February</a> 2016 (1)</li><li><a href="http://mike.teczno.com/notes/2016/01/">January</a> 2016 (1)</li><li><a href="http://mike.teczno.com/notes/2015/12/">December</a> 2015 (1)</li><li><a href="http://mike.teczno.com/notes/2015/11/">November</a> 2015 (2)</li><li><a href="http://mike.teczno.com/notes/2015/10/">October</a> 2015 (1)</li><li><a href="http://mike.teczno.com/notes/2015/08/">August</a> 2015 (4)</li><li><a href="http://mike.teczno.com/notes/2015/07/">July</a> 2015 (1)</li><li><a href="http://mike.teczno.com/notes/2015/06/">June</a> 2015 (1)</li><li><a href="http://mike.teczno.com/notes/2015/03/">March</a> 2015 (1)</li><li><a href="http://mike.teczno.com/notes/2015/01/">January</a> 2015 (1)</li><li><a href="http://mike.teczno.com/notes/2014/">2014</a>  (17)</li><li><a href="http://mike.teczno.com/notes/2013/">2013</a>  (22)</li><li><a href="http://mike.teczno.com/notes/2012/">2012</a>  (27)</li><li><a href="http://mike.teczno.com/notes/2011/">2011</a>  (18)</li><li><a href="http://mike.teczno.com/notes/2010/">2010</a>  (33)</li><li><a href="http://mike.teczno.com/notes/2009/">2009</a>  (42)</li><li><a href="http://mike.teczno.com/notes/2008/">2008</a>  (57)</li><li><a href="http://mike.teczno.com/notes/2007/">2007</a>  (89)</li><li><a href="http://mike.teczno.com/notes/2006/">2006</a>  (86)</li><li><a href="http://mike.teczno.com/notes/2005/">2005</a>  (140)</li><li><a href="http://mike.teczno.com/notes/2004/">2004</a>  (48)</li></ul>
+    </div>
+
+
+</div></body></html>

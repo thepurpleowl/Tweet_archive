@@ -1,0 +1,482 @@
+body
+{
+    background-image: url('../images/clouds-765.jpg');
+    /*
+    background-image: url('../images/salt.jpg');
+    background-image: url('../images/big-picture.jpg');
+    background-image: url('../images/maxim.zhestkov.jpg');
+    background-image: url('../images/earthquake.jpg');
+    */
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-color: black;
+}
+
+body, p, blockquote
+{
+    /* gaffling kottke.org's font choices */
+    font-size: 15px;
+    font-family: "MyriadPro-Regular", "Myriad Pro Regular", MyriadPro, "Myriad Pro", trebuchet, verdana, sans-serif;
+    line-height: 24px;
+}
+
+a
+{
+    color: black;
+    text-decoration: underline;
+    margin: 0 -2px;
+    padding: 0 2px;
+}
+
+/*
+a:visited
+{
+    text-decoration: line-through;
+}
+*/
+
+a:hover,
+a:active
+{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: arial, helvetica, sans-serif;
+}
+
+#stripe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#page
+{
+    background-color: white;
+    position: relative;
+
+    width: 50%;
+
+    margin: 144px 0 144px 20%;
+    padding: 22px 24px 24px 24px;
+    
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+
+    /*background-image: url('../homepage/new/baseline.png');*/
+}
+
+@media screen and (max-width: 840px)
+{
+    /* expand to fill the space left by the dropped sidebar */
+    #page
+    {
+        width: auto;
+        margin-left: 160px;
+        margin-right: 24px;
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    /* expand further to fill the space left by inlined dates */
+    #page
+    {
+        width: auto;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
+
+
+    #page p,
+    #page h1,
+    #page h2,
+    #page h3,
+    #page h4,
+    #page h5,
+    #page h6,
+    #page ul,
+    #page ol,
+    #page li,
+    #page blockquote
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #page h1,
+    #page h2					
+    {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+
+    #page h1
+    {
+        position: absolute;
+        left: auto;
+        top: -36px;
+    }
+
+        #page h1,
+        #page h1 a
+        {
+            color: white;
+            text-decoration: none;
+        }
+
+        #page h1 a:hover,
+        #page h1 a:active
+        {
+            color: black;
+            background-color: white;
+        }
+    
+    #page h2					
+    {
+        margin-top: 24px;
+    }
+
+    #page h3					
+    {
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+
+    #page p
+    {
+        margin-bottom: 12px;
+    }
+
+    #page ul,
+    #page ol
+    {
+        margin-top: 0px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+    }
+            
+    #page blockquote
+    {
+        margin: 12px 0;
+        padding: 0 0 0 23px;
+        border-left: 2px dotted #ddd;
+    }
+            
+    #page div.item
+    {
+        margin-top: 24px;
+    }
+            
+    #page div.item h3.title
+    {
+        font-size: 20px;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+    }
+            
+    #page div.item h4.comments
+    {
+        margin-top: 36px;
+        margin-bottom: 12px;
+    }
+            
+    #page div.item .comment .author
+    {
+        font-size: 13px;
+    }
+            
+    #page div.item .post-failed
+    {
+        background-color: yellow;
+        color: red;
+        border: 1px dotted orange;
+        padding: 12px 24px;
+    }
+            
+    #page div.item .post-failed strong
+    {
+        text-decoration: blink;
+    }
+            
+    #page div.item div.posted
+    {
+        margin-top: 24px;
+    }
+            
+    #page div.item h3.title a
+    {
+        text-decoration: none;
+        margin-left: -4px;
+        margin-right: -4px;
+        padding: 0 4px;
+    }
+    
+    #page .project
+    {
+        margin-top: 24px;
+    }
+                
+        #page .project a.preview
+        {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+        
+    #page .project a.preview,
+    #page .thumbnails a
+    {
+        font-size: 45px;
+        line-height: 45px;
+    }
+                
+        #page .project a.preview img,
+        #page .thumbnails a img
+        {
+            border-width: 1px;
+            border-style: solid;
+        	vertical-align: baseline;
+        }
+                    
+            #page .project a.preview:hover,
+            #page .project a.preview:active,
+            #page .thumbnails a:hover,
+            #page .thumbnails a:active
+            {
+                color: black;
+                background-color: transparent;
+            }
+
+    #page .footer
+    {
+        margin-top: 36px;
+    }
+                    
+#page h2.date
+{
+    position: absolute;
+    top: auto;
+    left: -153px;
+    margin: 0;
+    padding: 0;
+    
+    width: 144px;
+}
+
+#page h2.date,
+#page h2.date a
+{
+    color: white;
+}
+
+@media screen and (max-width: 640px)
+{
+    /* move the large date inline on very narrow screens */
+    #page h2.date
+    {
+        position: relative;
+        margin-bottom: 2em;
+        left: 0;
+    }
+    
+    #page h2.date,
+    #page h2.date a
+    {
+        color: black;
+    }
+}
+
+#page h2.date a
+{
+    margin: 0 -4px;
+    padding: 0 4px;
+}
+
+#blog .item img { width: 100%; }
+#blog .item img.old, #blog .item img.auto, #blog .item .item-description.old img { width: auto; }
+
+#snippet
+{
+    color: white;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 40%;
+    
+    padding: 22px 0 24px 24px;
+
+    /*background-image: url('baseline.png');*/
+}
+
+@media screen and (max-width: 840px)
+{
+    /* drop the sidebar to the bottom if there's not room */
+    #snippet
+    {
+        position: relative;
+        left: 0;
+        color: inherit;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+    #snippet,
+    #snippet a
+    {
+        color: white;
+    }
+
+    #snippet a:hover,
+    #snippet a:active
+    {
+        color: black;
+        background-color: white;
+    }
+
+    @media screen and (max-width: 840px)
+    {
+        /* when sidebar is dropped to the bottom, it's on a white background */
+        #snippet,
+        #snippet a
+        {
+            color: black;
+        }
+    
+        #snippet a:hover,
+        #snippet a:active
+        {
+            color: white;
+            background-color: black;
+        }
+    }
+
+    #snippet table.calendar th a
+    {
+        text-decoration: none;
+    }
+    
+    #snippet .snippet
+    {
+        margin-top: 24px;
+    }
+
+table.calendar
+{
+    margin-top: 0px;
+    margin-bottom: 24px;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+    table.calendar tr td,
+    table.calendar tr th
+    {
+        height: 24px;
+        margin: 0;
+        padding: 0 2px;
+        line-height: 24px;
+    }
+    
+    td.calendar_day_link
+    {
+        padding: 0 !important;
+    }
+    
+    td.calendar_day_link a
+    {
+        display: block;
+        margin: 0;
+        padding: 0 4px;
+    }
+    
+h2.date
+{
+    font-size: 14px;
+    line-height: 22px;
+    font-family: arial, helvetica, sans-serif;
+}
+        
+    h2.date a
+    {
+        text-decoration: none;
+    }
+
+    h2.date a:hover,
+    h2.date a:active
+    {
+        color: black !important;
+        background-color: white;
+    }
+
+    h2.date span:hover,
+    h2.date span:active
+    {
+        z-index: 2;
+    }
+
+    h2.date .year
+    {
+        display: block;
+        position: absolute;
+        top: 32px;
+        left: 68px;
+    }
+
+    h2.date .year,
+    h2.date .month
+    {
+        font-size: 32px;
+        letter-spacing: -2px;
+    }
+
+    h2.date .month
+    {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 68px;
+    }
+
+    h2.date .day
+    {
+        font-size: 64px;
+        letter-spacing: -4px;
+        line-height: 64px;
+    }
+
+    h2.date .day,
+    h2.date .hour-minute
+    {
+        display: block;
+        width: 64px;
+        text-align: right;
+    }
+
+    h2.date .hour-minute
+    {
+        line-height: 12px;
+    }
+
+    h2.date .punctuation
+    {
+        display: none;
+    }
